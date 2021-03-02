@@ -1,6 +1,6 @@
 # Firebase Login Demo
 
-This is a [minimal, reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) for sign-in link issue on iOS Gmail app.
+This is a [minimal, reproducible example](https://stackoverflow.com/help/minimal-reproducible-example) for sign-in link [issue](https://github.com/invertase/react-native-firebase/issues/4976) on iOS Gmail app.
 
 [`master`](https://github.com/rkbhochalya/Firebase-Login-Demo) branch has a working example with Google-provided domain (firebaselogindemo.page.link) being used in "sign-in with email" links.
 
