@@ -25,7 +25,7 @@
             <category android:name="android.intent.category.DEFAULT"/>
             <category android:name="android.intent.category.BROWSABLE"/>
             <data
-                android:host="firebaselogindemo.page.link"
+                android:host="firebaselogindemo.rkb.io"
                 android:scheme="https"/>
         </intent-filter>
       </activity>

@@ -41,7 +41,8 @@ const App = () => {
     try {
       await auth().sendSignInLinkToEmail(email, {
         handleCodeInApp: true,
-        url: 'https://firebaselogindemo.page.link',
+        url: 'https://fir-login-demo-2787e.web.app',
+        dynamicLinkDomain: 'firebaselogindemo.rkb.io',
         iOS: {
           bundleId: 'io.rkb.firebaselogindemo',
         },
@@ -69,6 +70,8 @@ const App = () => {
 
     setSendingEmail(false);
   }, [email]);
+
+  const logout = useCallback(() => auth().signOut(), []);
 
   useEffect(() => {
     const subscriber = auth().onAuthStateChanged(handleAuthStateChanged);
@@ -111,6 +114,12 @@ const App = () => {
     content = (
       <View>
         <Text>Welcome {user.displayName || user.email}</Text>
+        <Pressable
+          onPress={logout}
+          style={styles.button}
+          android_ripple={{color: 'rgba(0,0,0,0.2)', borderless: true}}>
+          <Text>Log out</Text>
+        </Pressable>
       </View>
     );
   }

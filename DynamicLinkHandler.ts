@@ -1,5 +1,5 @@
 import {useEffect, useCallback} from 'react';
-import {Alert} from 'react-native';
+import {Alert, Linking} from 'react-native';
 import dynamicLinks from '@react-native-firebase/dynamic-links';
 import auth from '@react-native-firebase/auth';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -48,6 +48,11 @@ function DynamicLinkHandler(): null {
           error,
         );
       });
+
+    Linking.getInitialURL().then((url) => {
+      console.log('Linking.getInitialURL', url);
+    });
+
     const unsubscribe = dynamicLinks().onLink(handleDynamicLink) as () => void;
     // When the component is unmounted, remove the listener
     return () => unsubscribe();

@@ -4,7 +4,7 @@
 <dict>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:firebaselogindemo.page.link</string>
+		<string>applinks:firebaselogindemo.rkb.io</string>
 	</array>
 </dict>
 </plist>
